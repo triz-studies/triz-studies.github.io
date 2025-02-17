@@ -17,9 +17,9 @@ Trong cả phát minh và đổi mới, các kỹ sư thường gặp phải **m
 
 Nguyên tắc nền tảng do người sáng lập TRIZ, **Genrikh Altshuller**, đưa ra là:
 
-> “Tất cả các hệ thống kỹ thuật phát triển theo các xu hướng khách quan tồn tại; những xu hướng này có thể được khám phá và sử dụng để giải quyết có chủ đích các bài toán sáng tạo.” citeturn0search0
+> “Tất cả các hệ thống kỹ thuật phát triển theo các xu hướng khách quan tồn tại; những xu hướng này có thể được khám phá và sử dụng để giải quyết có chủ đích các bài toán sáng tạo.”
 
-Trong nhiều thập kỷ, TRIZ đã được mở rộng, nhưng các khái niệm của Altshuller—đặc biệt là **Xu hướng tiến hóa của Hệ thống Kỹ thuật**—vẫn giữ vai trò thiết yếu trong nghiên cứu TRIZ nâng cao (Levels 2–3 và xa hơn).
+Trong nhiều thập kỷ, TRIZ đã được mở rộng, nhưng các khái niệm của Altshuller—đặc biệt là **Xu hướng tiến hóa của Hệ thống Kỹ thuật**—vẫn giữ vai trò thiết yếu trong nghiên cứu TRIZ nâng cao.
 
 ### 1.4 TRIZ Như Một Phương Pháp Có Hệ Thống
 

@@ -1,10 +1,18 @@
-project:
+project: 
   type: website
+  
+website: 
+  page-navigation: true
+  title: "Quarto TRIZ" 
 
-website:
-  title: "basic-TRIZ"
-  navbar:
-    left:
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
       - href: index.qmd
         text: Home
       - href: chap1.qmd
@@ -23,11 +31,17 @@ website:
         text: Chương 7
       - href: chap8.qmd
         text: Chương 8
+
+
 format:
   html:
     theme: cosmo
-    css: styles.css
+    code-copy: true
+    code-overflow: wrap
     toc: true
 
-editor: visual
 
+filters:
+  - quarto
+
+  
