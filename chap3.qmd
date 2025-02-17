@@ -1,6 +1,5 @@
 
-# **Chương 3**  
-## Giới Thiệu Về Phân Tích Chuỗi Nguyên Nhân – Hệ Quả
+# **Chương 3** Giới Thiệu Về Phân Tích Chuỗi Nguyên Nhân – Hệ Quả
 
 ### 3.1 CECA Trong Lộ Trình TRIZ
 

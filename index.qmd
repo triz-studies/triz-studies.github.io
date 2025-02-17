@@ -1,10 +1,10 @@
-# **Mục Lục**
+## **Mục Lục**
 
-## 1. Giới thiệu về Phương Pháp Giải Quyết Vấn Đề Hệ Thống Dựa Trên TRIZ
-## 2. Phân Tích Chức Năng của Thiết Bị 
-## 3. Giới Thiệu về Phân Tích Chuỗi Nguyên Nhân – Hệ Quả
-## 4. Loại Bỏ Phần Thừa trong Thiết Bị (Trimming)
-## 5. Mâu Thuẫn Kỹ Thuật và Ma Trận Mâu Thuẫn 
-## 6. Mâu Thuẫn Vật Lý 
-## 7. Giới Thiệu về Tài Nguyên của Hệ Thống Kỹ Thuật  
-## 8. Phương Pháp “9 Màn Hình” của Tư Duy Tài Năng (Người Vận Hành Hệ Thống)
+### 1. Giới thiệu về Phương Pháp Giải Quyết Vấn Đề Hệ Thống Dựa Trên TRIZ
+### 2. Phân Tích Chức Năng của Thiết Bị 
+### 3. Giới Thiệu về Phân Tích Chuỗi Nguyên Nhân – Hệ Quả
+### 4. Loại Bỏ Phần Thừa trong Thiết Bị (Trimming)
+### 5. Mâu Thuẫn Kỹ Thuật và Ma Trận Mâu Thuẫn 
+### 6. Mâu Thuẫn Vật Lý 
+### 7. Giới Thiệu về Tài Nguyên của Hệ Thống Kỹ Thuật  
+### 8. Phương Pháp “9 Màn Hình” của Tư Duy Tài Năng (Người Vận Hành Hệ Thống)

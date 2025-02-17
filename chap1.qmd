@@ -1,5 +1,4 @@
-# **Chương 1**  
-## Giới Thiệu Về Phương Pháp Giải Quyết Vấn Đề Hệ Thống Dựa Trên TRIZ
+# **Chương 1**  Giới Thiệu Về Phương Pháp Giải Quyết Vấn Đề Hệ Thống Dựa Trên TRIZ
 
 ### 1.1 TRIZ Trong Bối Cảnh: Nguồn Gốc và Sự Ứng Dụng Toàn Cầu
 

@@ -1,6 +1,5 @@
 
-# **Chương 4**  
-## Loại Bỏ Phần Thừa (Trimming) Cho Thiết Bị
+# **Chương 4**  Loại Bỏ Phần Thừa (Trimming) Cho Thiết Bị
 
 ### 4.1 Tổng Quan: Loại Bỏ Phần Thừa Như Một Chiến Lược Đột Phá
 

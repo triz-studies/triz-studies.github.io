@@ -1,10 +1,4 @@
-
----
-
-<a name="chapter-2"></a>
-
-# **Chương 2**  
-## Phân Tích Chức Năng của Thiết Bị
+# **Chương 2**  Phân Tích Chức Năng của Thiết Bị
 
 ### Tổng Quan Chương
 

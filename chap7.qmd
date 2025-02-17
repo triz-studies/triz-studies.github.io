@@ -1,6 +1,5 @@
 
-# **Chương 7**  
-## Giới Thiệu Về Tài Nguyên Của Hệ Thống Kỹ Thuật
+# **Chương 7**  Giới Thiệu Về Tài Nguyên Của Hệ Thống Kỹ Thuật
 
 *(Dựa trên bài viết của Boris Zlotin và Alla Zusman: **Khái Niệm Tài Nguyên trong TRIZ: Quá Khứ, Hiện Tại và Tương Lai**. Sử dụng với sự cho phép.)*
 
