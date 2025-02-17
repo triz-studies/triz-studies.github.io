@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>chap5 – basic-TRIZ</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">basic-TRIZ</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap1.html"> 
+<span class="menu-text">Chương 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap2.html"> 
+<span class="menu-text">Chương 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap3.html"> 
+<span class="menu-text">Chương 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap4.html"> 
+<span class="menu-text">Chương 4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./chap5.html" aria-current="page"> 
+<span class="menu-text">Chương 5</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap6.html"> 
+<span class="menu-text">Chương 6</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap7.html"> 
+<span class="menu-text">Chương 7</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap8.html"> 
+<span class="menu-text">Chương 8</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#chương-5-phương-pháp-lý-giải-giải-pháp-sáng-tạo-giải-quyết-mâu-thuẫn-kỹ-thuật" id="toc-chương-5-phương-pháp-lý-giải-giải-pháp-sáng-tạo-giải-quyết-mâu-thuẫn-kỹ-thuật" class="nav-link active" data-scroll-target="#chương-5-phương-pháp-lý-giải-giải-pháp-sáng-tạo-giải-quyết-mâu-thuẫn-kỹ-thuật"><strong>Chương 5</strong> Phương Pháp Lý Giải Giải Pháp Sáng Tạo &amp; Giải Quyết Mâu Thuẫn Kỹ Thuật</a>
+  <ul class="collapse">
+  <li><a href="#lý-giải-một-cách-có-lôgích-các-giải-pháp-sáng-tạo-đã-ra-đời" id="toc-lý-giải-một-cách-có-lôgích-các-giải-pháp-sáng-tạo-đã-ra-đời" class="nav-link" data-scroll-target="#lý-giải-một-cách-có-lôgích-các-giải-pháp-sáng-tạo-đã-ra-đời">5.1 LÝ GIẢI MỘT CÁCH CÓ LÔGÍCH CÁC GIẢI PHÁP SÁNG TẠO ĐÃ RA ĐỜI</a>
+  <ul class="collapse">
+  <li><a href="#mở-đầu" id="toc-mở-đầu" class="nav-link" data-scroll-target="#mở-đầu">5.1.1 Mở đầu</a></li>
+  <li><a href="#lôgích-nhu-cầu-hệ-thống" id="toc-lôgích-nhu-cầu-hệ-thống" class="nav-link" data-scroll-target="#lôgích-nhu-cầu-hệ-thống">5.1.2 Lôgích “Nhu Cầu – Hệ Thống”</a></li>
+  <li><a href="#liên-hệ-với-40-nguyên-tắc-triz" id="toc-liên-hệ-với-40-nguyên-tắc-triz" class="nav-link" data-scroll-target="#liên-hệ-với-40-nguyên-tắc-triz">5.1.3 Liên hệ với 40 nguyên tắc TRIZ</a></li>
+  <li><a href="#chương-trình-6-bước-để-phân-tích-lôgích-một-giải-pháp-sẵn-có" id="toc-chương-trình-6-bước-để-phân-tích-lôgích-một-giải-pháp-sẵn-có" class="nav-link" data-scroll-target="#chương-trình-6-bước-để-phân-tích-lôgích-một-giải-pháp-sẵn-có">5.1.4 “Chương trình 6 bước” để phân tích lôgích một giải pháp sẵn có</a></li>
+  <li><a href="#ví-dụ" id="toc-ví-dụ" class="nav-link" data-scroll-target="#ví-dụ">5.1.5 Ví dụ</a></li>
+  </ul></li>
+  <li><a href="#mâu-thuẫn-kỹ-thuật-và-ma-trận-mâu-thuẫn" id="toc-mâu-thuẫn-kỹ-thuật-và-ma-trận-mâu-thuẫn" class="nav-link" data-scroll-target="#mâu-thuẫn-kỹ-thuật-và-ma-trận-mâu-thuẫn">5.2 MÂU THUẪN KỸ THUẬT VÀ MA TRẬN MÂU THUẪN</a>
+  <ul class="collapse">
+  <li><a href="#tại-sao-mâu-thuẫn-kỹ-thuật-là-trung-tâm-trong-triz" id="toc-tại-sao-mâu-thuẫn-kỹ-thuật-là-trung-tâm-trong-triz" class="nav-link" data-scroll-target="#tại-sao-mâu-thuẫn-kỹ-thuật-là-trung-tâm-trong-triz">5.2.1 Tại sao mâu thuẫn kỹ thuật là trung tâm trong TRIZ</a></li>
+  <li><a href="#diễn-đạt-mâu-thuẫn-bằng-ifthenbut" id="toc-diễn-đạt-mâu-thuẫn-bằng-ifthenbut" class="nav-link" data-scroll-target="#diễn-đạt-mâu-thuẫn-bằng-ifthenbut">5.2.2 Diễn đạt mâu thuẫn bằng IF–THEN–BUT</a></li>
+  <li><a href="#ma-trận-altshuller-ma-trận-mâu-thuẫn" id="toc-ma-trận-altshuller-ma-trận-mâu-thuẫn" class="nav-link" data-scroll-target="#ma-trận-altshuller-ma-trận-mâu-thuẫn">5.2.3 Ma Trận Altshuller (Ma Trận Mâu Thuẫn)</a></li>
+  <li><a href="#mâu-thuẫn-đảo-ngược" id="toc-mâu-thuẫn-đảo-ngược" class="nav-link" data-scroll-target="#mâu-thuẫn-đảo-ngược">5.2.4 Mâu thuẫn đảo ngược</a></li>
+  <li><a href="#ví-dụ-cánh-máy-bay" id="toc-ví-dụ-cánh-máy-bay" class="nav-link" data-scroll-target="#ví-dụ-cánh-máy-bay">5.2.5 Ví dụ cánh máy bay</a></li>
+  <li><a href="#các-bước-tra-ma-trận" id="toc-các-bước-tra-ma-trận" class="nav-link" data-scroll-target="#các-bước-tra-ma-trận">5.2.6 Các bước tra Ma Trận</a></li>
+  <li><a href="#kết-luận" id="toc-kết-luận" class="nav-link" data-scroll-target="#kết-luận">5.2.7 Kết luận</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="chương-5-phương-pháp-lý-giải-giải-pháp-sáng-tạo-giải-quyết-mâu-thuẫn-kỹ-thuật" class="level1">
+<h1><strong>Chương 5</strong> Phương Pháp Lý Giải Giải Pháp Sáng Tạo &amp; Giải Quyết Mâu Thuẫn Kỹ Thuật</h1>
+<section id="lý-giải-một-cách-có-lôgích-các-giải-pháp-sáng-tạo-đã-ra-đời" class="level2">
+<h2 class="anchored" data-anchor-id="lý-giải-một-cách-có-lôgích-các-giải-pháp-sáng-tạo-đã-ra-đời">5.1 LÝ GIẢI MỘT CÁCH CÓ LÔGÍCH CÁC GIẢI PHÁP SÁNG TẠO ĐÃ RA ĐỜI</h2>
+<section id="mở-đầu" class="level3">
+<h3 class="anchored" data-anchor-id="mở-đầu">5.1.1 Mở đầu</h3>
+<ul>
+<li>Nhiều người chỉ chú trọng <strong>kết quả cuối cùng</strong> (giải pháp, sản phẩm) mà bỏ qua <strong>quá trình tư duy</strong> dẫn đến kết quả đó.<br>
+</li>
+<li><strong>Phương pháp luận sáng tạo và đổi mới (PPLSTVĐM)</strong> quan tâm cả quá trình suy nghĩ, nhằm xây dựng hệ thống <strong>phương pháp</strong> và <strong>kỹ năng</strong> giúp tư duy đúng, chứ không chỉ chăm chăm kết quả.<br>
+</li>
+<li>Để hiểu một giải pháp sáng tạo, ta cần “lý giải lôgích” con đường tư duy hình thành nó. Nhờ đó:
+<ul>
+<li><strong>Hiểu sâu</strong> ý nghĩa, giá trị của giải pháp.<br>
+</li>
+<li><strong>Dễ nhớ, dễ truyền đạt</strong>.<br>
+</li>
+<li><strong>Vận dụng</strong> lôgích cho các bài toán tương tự.</li>
+</ul></li>
+</ul>
+</section>
+<section id="lôgích-nhu-cầu-hệ-thống" class="level3">
+<h3 class="anchored" data-anchor-id="lôgích-nhu-cầu-hệ-thống">5.1.2 Lôgích “Nhu Cầu – Hệ Thống”</h3>
+<ul>
+<li><p><strong>Nhu cầu</strong> là động lực khởi phát mọi sáng tạo (“Nhu cầu là mẹ của sáng chế”).<br>
+</p></li>
+<li><p>Nhằm đáp ứng nhu cầu, con người tạo ra hoặc cải tiến <strong>hệ thống</strong> (sản phẩm, sáng chế).<br>
+</p></li>
+<li><p>Tiến trình phát triển của hệ thống thường theo bốn bước:</p>
+<ol type="1">
+<li><strong>Nhu cầu</strong>: “Ta muốn đạt điều gì?”<br>
+</li>
+<li><strong>Xác định tính hệ thống</strong>: “Hệ thống ấy cần chức năng/đặc tính gì?”<br>
+</li>
+<li><strong>Tìm hiểu nguồn dự trữ</strong>: “Có sẵn vật liệu, năng lượng, tri thức nào?”<br>
+</li>
+<li><strong>Thiết kế</strong>: Cụ thể hóa thành giải pháp (cấu tạo, vận hành…).</li>
+</ol></li>
+<li><p>Mỗi bước đều có thể gắn với các <strong>thủ thuật (nguyên tắc) TRIZ</strong> để mở rộng ý tưởng.</p></li>
+</ul>
+</section>
+<section id="liên-hệ-với-40-nguyên-tắc-triz" class="level3">
+<h3 class="anchored" data-anchor-id="liên-hệ-với-40-nguyên-tắc-triz">5.1.3 Liên hệ với 40 nguyên tắc TRIZ</h3>
+<ul>
+<li>Bước <strong>Nhu cầu</strong>: Thường gợi nhớ nguyên tắc <strong>Dự Phòng (11)</strong>, <strong>Liên tục các tác động có ích (20)</strong>.<br>
+</li>
+<li>Bước <strong>Tính hệ thống</strong>: Các nguyên tắc “khái quát” như <strong>Tách Khỏi (2)</strong>, <strong>Phẩm Chất Cục Bộ (3)</strong>, <strong>Vạn Năng (6)</strong>, <strong>Đảo Ngược (13)</strong>, <strong>Linh Động (15)</strong>…<br>
+</li>
+<li>Bước <strong>Tìm hiểu nguồn dự trữ</strong>: Nổi bật nguyên tắc <strong>Tự Phục Vụ (25)</strong>.<br>
+</li>
+<li>Bước <strong>Thiết kế</strong>: Nhiều nguyên tắc cụ thể, ví dụ <strong>Phân Nhỏ (1)</strong>, <strong>Gây Ứng Suất Sơ Bộ (9)</strong>, <strong>Phản Hồi (23)</strong>, <strong>Thay Đổi Các Thông Số (35)</strong>, <strong>Vật Liệu Hợp Thành (40)</strong>…</li>
+</ul>
+</section>
+<section id="chương-trình-6-bước-để-phân-tích-lôgích-một-giải-pháp-sẵn-có" class="level3">
+<h3 class="anchored" data-anchor-id="chương-trình-6-bước-để-phân-tích-lôgích-một-giải-pháp-sẵn-có">5.1.4 “Chương trình 6 bước” để phân tích lôgích một giải pháp sẵn có</h3>
+<ol type="1">
+<li><strong>Chọn hệ tiền thân</strong>: Phiên bản cũ (trước cải tiến).<br>
+</li>
+<li><strong>So sánh với hệ cải tiến</strong>: Tìm sự khác biệt.<br>
+</li>
+<li><strong>Ghi nhận ích lợi</strong> do khác biệt mang lại.<br>
+</li>
+<li><strong>Liên hệ các thủ thuật</strong>: “Nếu ta đi từ cũ sang mới, đã dùng nguyên tắc nào?”<br>
+</li>
+<li><strong>Kiểm tra lại</strong> xem còn thiếu sót gì không.<br>
+</li>
+<li><strong>Xâu chuỗi</strong> các thủ thuật theo lôgích Nhu Cầu → Hệ Thống → Nguồn dự trữ → Thiết kế.</li>
+</ol>
+</section>
+<section id="ví-dụ" class="level3">
+<h3 class="anchored" data-anchor-id="ví-dụ">5.1.5 Ví dụ</h3>
+<ul>
+<li><strong>Bút chì</strong> (gắn sẵn tẩy, thân lục giác, bút chì bấm… so với bút chì gỗ thường):
+<ul>
+<li>Thấy các nguyên tắc như <strong>Kết Hợp</strong>, <strong>Tự Phục Vụ</strong>, <strong>Phân Nhỏ</strong>, <strong>Linh Động</strong>, <strong>Dự Phòng</strong>.<br>
+</li>
+</ul></li>
+<li><strong>Bài toán đong 4 lít bằng bình 3 &amp; 5 lít</strong>:
+<ul>
+<li>Liên quan đến <strong>Tách Khỏi</strong> (loại bớt 1 lít), <strong>Thực Hiện Sơ Bộ</strong>, <strong>Tự Phục Vụ</strong> (tận dụng thao tác đổ qua lại)…</li>
+</ul></li>
+</ul>
+<p>Những ví dụ này cho thấy mọi giải pháp sáng tạo đều có thể lý giải lôgích bằng cách dùng <strong>40 nguyên tắc</strong> và sắp xếp theo <strong>chuỗi Nhu Cầu – Hệ Thống</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="mâu-thuẫn-kỹ-thuật-và-ma-trận-mâu-thuẫn" class="level2">
+<h2 class="anchored" data-anchor-id="mâu-thuẫn-kỹ-thuật-và-ma-trận-mâu-thuẫn">5.2 MÂU THUẪN KỸ THUẬT VÀ MA TRẬN MÂU THUẪN</h2>
+<section id="tại-sao-mâu-thuẫn-kỹ-thuật-là-trung-tâm-trong-triz" class="level3">
+<h3 class="anchored" data-anchor-id="tại-sao-mâu-thuẫn-kỹ-thuật-là-trung-tâm-trong-triz">5.2.1 Tại sao mâu thuẫn kỹ thuật là trung tâm trong TRIZ</h3>
+<ul>
+<li>Trong kỹ thuật, ta thường gặp tình huống “cải thiện đặc tính A lại làm xấu đặc tính B”.<br>
+</li>
+<li><strong>TRIZ</strong> chủ trương <strong>loại bỏ</strong> mâu thuẫn, chứ không chỉ thỏa hiệp.</li>
+</ul>
+</section>
+<section id="diễn-đạt-mâu-thuẫn-bằng-ifthenbut" class="level3">
+<h3 class="anchored" data-anchor-id="diễn-đạt-mâu-thuẫn-bằng-ifthenbut">5.2.2 Diễn đạt mâu thuẫn bằng IF–THEN–BUT</h3>
+<ul>
+<li><strong>IF</strong> (nếu) ta làm X,<br>
+</li>
+<li><strong>THEN</strong> đặc tính A tốt lên,<br>
+</li>
+<li><strong>BUT</strong> đặc tính B lại xấu đi.</li>
+</ul>
+</section>
+<section id="ma-trận-altshuller-ma-trận-mâu-thuẫn" class="level3">
+<h3 class="anchored" data-anchor-id="ma-trận-altshuller-ma-trận-mâu-thuẫn">5.2.3 Ma Trận Altshuller (Ma Trận Mâu Thuẫn)</h3>
+<ul>
+<li><strong>Genrich Altshuller</strong> đã tổng hợp <strong>40 Nguyên Tắc Sáng Tạo</strong> từ việc phân tích bằng sáng chế.<br>
+</li>
+<li>Ông xây dựng <strong>Ma Trận Mâu Thuẫn</strong> gồm 39 thông số kỹ thuật, chia thành:
+<ul>
+<li>Dòng (cần cải thiện)<br>
+</li>
+<li>Cột (có nguy cơ xấu đi)<br>
+</li>
+</ul></li>
+<li>Mỗi ô giao nhau gợi ý vài nguyên tắc thường dùng để giải xung đột.</li>
+</ul>
+</section>
+<section id="mâu-thuẫn-đảo-ngược" class="level3">
+<h3 class="anchored" data-anchor-id="mâu-thuẫn-đảo-ngược">5.2.4 Mâu thuẫn đảo ngược</h3>
+<ul>
+<li>Ta cũng có thể xét chiều ngược:
+<ul>
+<li>“Nếu KHÔNG làm X, ta <strong>tránh</strong> được B xấu, <strong>nhưng</strong> A không cải thiện.”<br>
+</li>
+</ul></li>
+<li>Mâu thuẫn đảo ngược giúp ta tìm thêm hướng mới.</li>
+</ul>
+</section>
+<section id="ví-dụ-cánh-máy-bay" class="level3">
+<h3 class="anchored" data-anchor-id="ví-dụ-cánh-máy-bay">5.2.5 Ví dụ cánh máy bay</h3>
+<ul>
+<li>“IF gia cố cánh (X), THEN cánh cứng hơn (A), BUT máy bay nặng hơn (B).”<br>
+</li>
+<li>Ma Trận gợi ý các nguyên tắc: <strong>Phân Nhỏ (1)</strong>, <strong>Linh Động (15)</strong>, <strong>Chống Trọng Lượng (8)</strong>, <strong>Vật Liệu Hợp Thành (40)</strong>…<br>
+</li>
+<li>Xét mâu thuẫn đảo ngược đôi khi hé lộ các nguyên tắc khác.</li>
+</ul>
+</section>
+<section id="các-bước-tra-ma-trận" class="level3">
+<h3 class="anchored" data-anchor-id="các-bước-tra-ma-trận">5.2.6 Các bước tra Ma Trận</h3>
+<ol type="1">
+<li>Viết mâu thuẫn IF–THEN–BUT.<br>
+</li>
+<li>Xác định thông số (trong 39 thông số TRIZ).<br>
+</li>
+<li>Tìm cặp thông số trên Ma Trận.<br>
+</li>
+<li>Đọc các Nguyên Tắc Sáng Tạo gợi ý.<br>
+</li>
+<li>Có thể khảo sát thêm mâu thuẫn đảo ngược.</li>
+</ol>
+</section>
+<section id="kết-luận" class="level3">
+<h3 class="anchored" data-anchor-id="kết-luận">5.2.7 Kết luận</h3>
+<ul>
+<li>Ma Trận Mâu Thuẫn giúp tìm hướng giải quyết xung đột “A tốt lên – B xấu đi” một cách <strong>không thỏa hiệp</strong>.<br>
+</li>
+<li>Dù ra đời trong bối cảnh kỹ thuật, nó cũng có thể mở rộng sang các lĩnh vực phi kỹ thuật, miễn là ta xác định đúng “thông số tương đương” và kiên nhẫn áp dụng 40 nguyên tắc.</li>
+</ul>
+<hr>
+<section id="tóm-lược" class="level4">
+<h4 class="anchored" data-anchor-id="tóm-lược">TÓM LƯỢC</h4>
+<ul>
+<li><strong>5.1</strong> đã trình bày cách “lý giải lôgích” các giải pháp sáng tạo (dùng 40 nguyên tắc và lôgích Nhu Cầu – Hệ Thống).<br>
+</li>
+<li><strong>5.2</strong> giới thiệu <strong>mâu thuẫn kỹ thuật</strong>, “Ma Trận Mâu Thuẫn,” và cách sử dụng <strong>40 nguyên tắc</strong> để vượt qua xung đột A–B mà không phải đánh đổi.</li>
+</ul>
+<p>Đây là những công cụ quan trọng trong TRIZ, giúp ta “mở khóa” tư duy sáng tạo một cách có hệ thống và nhất quán.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/triz-studies\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
