@@ -1,0 +1,77 @@
+# **Chương 1**  
+## Giới Thiệu Về Phương Pháp Giải Quyết Vấn Đề Hệ Thống Dựa Trên TRIZ
+
+### 1.1 TRIZ Trong Bối Cảnh: Nguồn Gốc và Sự Ứng Dụng Toàn Cầu
+
+**TRIZ** (Lý thuyết Giải Quyết Vấn Đề Sáng Tạo) được khai phá tại Liên Xô bởi **Genrich Altshuller** vào giữa thế kỷ 20. Là một nhà phát minh, Altshuller đã phân tích hàng nghìn bằng sáng chế để tìm ra **những mẫu chung** đằng sau các giải pháp sáng tạo. Ông nhận thấy rằng nhiều phát minh, mặc dù đến từ các lĩnh vực khác nhau, đều sử dụng **chiến lược chung** để giải quyết mâu thuẫn—điều này dẫn đến các công cụ TRIZ mà chúng ta có ngày nay.
+
+Từ những khởi đầu ở Liên Xô, TRIZ dần dần lan rộng về phía phương Tây vào những năm 1990. Ngày nay, nó được sử dụng bởi các **tập đoàn toàn cầu** như Samsung, Hyundai, Intel, Boeing, General Electric, và nhiều công ty khác. TRIZ có thể được áp dụng cho các sản phẩm (cơ khí, điện tử, hóa học), quy trình sản xuất, thậm chí là các cải tiến trong tổ chức hay tiếp thị.
+
+### 1.2 Tại Sao Chúng Ta Cần TRIZ: Sự Đổi Mới So Với Phát Minh
+
+- **Phát minh** là khoảnh khắc “bùng nổ” – thường được ghi nhận qua bằng sáng chế.  
+- **Đổi mới** rộng hơn, bao gồm **toàn bộ quá trình** từ ý tưởng đến sản phẩm hoặc dịch vụ có thể thương mại hóa.  
+
+Trong cả phát minh và đổi mới, các kỹ sư thường gặp phải **mâu thuẫn kỹ thuật**—nơi mà việc cải tiến một đặc tính lại làm xấu đi đặc tính khác. TRIZ cung cấp một cách tiếp cận **có hệ thống** để **giải quyết** những mâu thuẫn đó.
+
+### 1.3 Luận Điểm của Altshuller
+
+Nguyên tắc nền tảng do người sáng lập TRIZ, **Genrikh Altshuller**, đưa ra là:
+
+> “Tất cả các hệ thống kỹ thuật phát triển theo các xu hướng khách quan tồn tại; những xu hướng này có thể được khám phá và sử dụng để giải quyết có chủ đích các bài toán sáng tạo.” citeturn0search0
+
+Trong nhiều thập kỷ, TRIZ đã được mở rộng, nhưng các khái niệm của Altshuller—đặc biệt là **Xu hướng tiến hóa của Hệ thống Kỹ thuật**—vẫn giữ vai trò thiết yếu trong nghiên cứu TRIZ nâng cao (Levels 2–3 và xa hơn).
+
+### 1.4 TRIZ Như Một Phương Pháp Có Hệ Thống
+
+Các công cụ TRIZ biến quá trình giải quyết vấn đề từ **suy đoán** thành một quá trình **có cấu trúc, lặp lại được**. Chúng giúp các kỹ sư:
+
+- Xác định “vấn đề đúng” cần giải quyết.  
+- Mô hình hóa vấn đề theo các **chức năng** và **mâu thuẫn**.  
+- Sử dụng **Các Nguyên Tắc Sáng Tạo** và các kỹ thuật TRIZ khác để tạo ra giải pháp đột phá.  
+
+Nhờ đó, TRIZ có thể rút ngắn đáng kể thời gian đưa sản phẩm ra thị trường, giảm chi phí và cho phép đạt được những tính năng hay hiệu suất mà trước đây được cho là “không thể.”
+
+### 1.5 Lợi Ích của TRIZ Trong Ngành Công Nghiệp
+
+- **Khái Niệm Đột Phá Cho Sản Phẩm Hiện Tại**: Bằng cách tập trung vào nguyên nhân gốc rễ và mâu thuẫn, TRIZ thúc đẩy những cải tiến sản phẩm đột phá.  
+- **Khám Phá Các Ý Tưởng Sản Phẩm Mới**: Các công cụ sáng tạo dựa trên TRIZ vượt trội hơn các phiên động não truyền thống, thường dẫn đến các giải pháp có thể được cấp bằng sáng chế.  
+- **Quy Trình Sản Xuất Chi Phí Thấp Hơn**: Các phương pháp TRIZ có thể tối ưu hóa sản xuất bằng cách giải quyết các nút thắt hoặc loại bỏ các thành phần thừa.  
+- **Chiến Lược Sáng Chế Bằng Sáng Chế**: Việc phân tích không gian giải pháp một cách có hệ thống giúp công ty xây dựng một danh mục sở hữu trí tuệ vững mạnh hơn.
+
+#### Những Câu Chuyện Thành Công
+
+**Samsung** đã nổi tiếng khi đào tạo hàng chục nghìn kỹ sư về TRIZ, qua đó tăng đáng kể số lượng phát minh có thể cấp bằng sáng chế và thành công trên thị trường toàn cầu. **Hyundai**, **Procter & Gamble** và nhiều công ty khác cũng ghi nhận những thay đổi tương tự sau khi áp dụng TRIZ trong R&D một cách có hệ thống.
+
+### 1.6 Quy Trình Đổi Mới Thực Tiễn
+
+Một sáng kiến TRIZ thường bao gồm ba giai đoạn (đôi khi được thể hiện đơn giản là “Xác Định Vấn Đề → Giải Quyết Vấn Đề → Đánh Giá Ý Tưởng”):
+
+1. **Xác Định Vấn Đề:** Sử dụng các công cụ phân tích TRIZ—như Phân Tích Chức Năng hoặc Phân Tích Chuỗi Nguyên Nhân – Hệ Quả—để tìm ra những vấn đề cơ bản, tiềm ẩn.  
+2. **Giải Quyết Vấn Đề:** Áp dụng các công cụ giải pháp của TRIZ, chẳng hạn như **Ma Trận Mâu Thuẫn** hay giải quyết **Mâu Thuẫn Vật Lý**, để đề xuất các giải pháp sáng tạo.  
+3. **Xác Thực Ý Tưởng:** Lọc ra và tinh chỉnh các giải pháp dựa trên tính khả thi, chi phí và các yếu tố kinh doanh.
+
+### 1.7 Phạm Vi và Các Công Cụ Trong Quyển Sách Này
+
+1. **Phân Tích Chức Năng (FA)**  
+2. **Phân Tích Chuỗi Nguyên Nhân – Hệ Quả (CECA)**  
+3. **Loại Bỏ Phần Thừa (Trimming)**  
+4. **Mâu Thuẫn Kỹ Thuật & Ma Trận Altshuller**  
+5. **Mâu Thuẫn Vật Lý**  
+6. **Tài Nguyên của Hệ Thống Kỹ Thuật**  
+7. **Phương Pháp 9 Màn Hình (Người Vận Hành Hệ Thống)**
+
+Những công cụ này cho phép bạn xác định và giải quyết các vấn đề trong **hệ thống kỹ thuật** (thiết bị), dù chúng cũng có thể hướng dẫn các lĩnh vực đổi mới khác.
+
+
+
+### Kết Luận
+
+TRIZ thay đổi cách bạn nhìn nhận và giải quyết vấn đề. Khi bạn thoát ra khỏi tư duy dựa trên thỏa hiệp và học cách **loại bỏ** mâu thuẫn, bạn mở ra cánh cửa cho những đổi mới thực sự. Ngay cả việc nắm vững những kiến thức cơ bản ở Level 1 cũng có thể dẫn đến những đột phá đáng kể trong thiết kế sản phẩm và quy trình.
+
+**Tài liệu Tham Khảo cho Chương 1**  
+1. G.S. Altshuller. *Creativity as an Exact Science (The Theory of the Solution of Inventive Problems).* Gordon and Breach Science Publishers, 1984.  
+2. S. Ikovenko. Tài liệu đào tạo, Boston Inventive Inc., 2017.  
+3. *Oslo Manual: Guidelines for Collecting and Interpreting Innovation Data.* OECD/Eurostat. [Nguồn trực tuyến](https://www.oecd-ilibrary.org/science-and-technology/oslo-manual_9789264013100-en.htm)  
+4. L. Mann, *Hướng Dẫn Sử Dụng Hệ Thống Toán Học — “9 Cửa Sổ Nhìn Thế Giới”*, TRIZ Journal.
+

@@ -1,0 +1,69 @@
+
+# **Chương 7**  
+## Giới Thiệu Về Tài Nguyên Của Hệ Thống Kỹ Thuật
+
+*(Dựa trên bài viết của Boris Zlotin và Alla Zusman: **Khái Niệm Tài Nguyên trong TRIZ: Quá Khứ, Hiện Tại và Tương Lai**. Sử dụng với sự cho phép.)*
+
+### 7.1 Tại Sao Tài Nguyên Lại Quan Trọng
+
+Trong TRIZ, **tài nguyên** bao gồm **bất kỳ** chất, trường, không gian, thời gian, thông tin, hoặc chức năng nào có trong hoặc xung quanh hệ thống mà có thể được tận dụng với **chi phí thấp hoặc miễn phí**. Việc phát hiện và khai thác các tài nguyên ẩn hoặc chưa được sử dụng giúp hệ thống tiến gần đến trạng thái **lý tưởng**:
+
+\[
+\text{Lý Tưởng} = \frac{\text{Giá Trị Tạo Ra}}{\text{Chi Phí}}
+\]
+
+Khi bạn phát hiện ra và tận dụng các tài nguyên hiện có (ví dụ: sản phẩm phụ miễn phí, không gian thừa, các lực tự nhiên), bạn có thể tạo ra giá trị mới hoặc giảm chi phí mà không làm tăng độ phức tạp đáng kể.
+
+### 7.2 Các Loại Tài Nguyên
+
+1. **Tài Nguyên Chất/Vật Liệu:** Các vật liệu hiện có, bao gồm cả chất thải hoặc sản phẩm phụ.  
+2. **Tài Nguyên Trường/Năng Lượng:** Trọng lực, từ trường, nhiệt, điện.  
+3. **Tài Nguyên Thông Tin:** Dữ liệu, kiến thức hệ thống, tín hiệu.  
+4. **Không Gian:** Các không gian hoặc bề mặt trong hoặc xung quanh hệ thống.  
+5. **Thời Gian:** Các khoảng thời gian không sử dụng hoặc sử dụng dưới mức.  
+6. **Tài Nguyên Chức Năng:** Các khả năng chưa được tận dụng của các thành phần hiện có.  
+7. **Tài Nguyên Tiến Hóa:** Kiến thức từ các mẫu cũ hoặc từ các ngành công nghiệp song song.
+
+### 7.3 Tài Nguyên Ẩn
+
+Thường thì các tài nguyên bị bỏ qua. Ví dụ, một khe không khí có thể được sử dụng như cách cách nhiệt hoặc làm bể chứa; một khí thải phụ có thể được tận dụng để làm sạch hoặc sưởi ấm. TRIZ khuyến khích việc **tìm kiếm** hệ thống các yếu tố này.
+
+### 7.4 Tài Nguyên Tiến Hóa
+
+Một khái niệm sâu hơn của TRIZ là các hệ thống tiến hóa theo những **mẫu nhất định** (đường cong S, tăng dần sự năng động, v.v.). Các giải pháp từ quá khứ hoặc từ các ngành công nghiệp song song có thể hé lộ những tài nguyên mới—như thiết kế module hoặc vật liệu tiên tiến—có thể được tích hợp với chi phí tối thiểu.
+
+### 7.5 Thuật Toán Khám Phá Tài Nguyên
+
+1. **Xác Định Nhu Cầu:** Xác định bạn cần chất, trường, hay tài nguyên nào khác.  
+2. **Xác Định Nguồn Tiềm Năng** trong hệ thống, hệ thống lớn hơn, hoặc môi trường xung quanh.  
+3. **Sửa Đổi** hoặc kết hợp các tài nguyên nếu cần (tài nguyên chuyển đổi).  
+4. **Kiểm Tra Tính Khả Thi:** Đánh giá chi phí và độ phức tạp.  
+5. **Tinh Chỉnh** hoặc mở rộng phạm vi tìm kiếm.
+
+### 7.6 Kết Luận
+
+Tài nguyên là **nền tảng** của tư duy TRIZ. Chúng cho phép bạn đạt được nhiều hơn với những gì bạn đã có, tạo ra các giải pháp đơn giản, rẻ tiền và tinh tế đưa hệ thống tiến gần hơn đến trạng thái **lý tưởng**.
+
+---
+
+#### Bài Tập cho Chương 7
+
+1. **Các Câu Hỏi Kiểm Tra**  
+   1. Điều gì được coi là tài nguyên trong TRIZ?  
+   2. Nêu tên các loại tài nguyên chính.  
+   3. Khái niệm “lý tưởng” có liên quan như thế nào đến việc sử dụng tài nguyên?  
+   4. Tài nguyên tiến hóa là gì?
+
+2. **Bài Tập 11**  
+   Xác định tất cả **các tài nguyên tiềm năng** (chất, trường, thời gian, không gian, v.v.) có trong một chiếc bàn ủi gia đình (bề mặt kim loại, bình chứa nước, tay cầm, môi trường, nhiệt, v.v.).
+
+3. **Bài Tập 12**  
+   Làm điều tương tự cho một chiếc điện thoại di động — hãy xem xét các thành phần vật lý (pin, vỏ máy), môi trường (không khí, túi người dùng), chức năng (camera, cảm biến gia tốc), và tài nguyên dựa trên thời gian (thời gian sạc, thời gian CPU nhàn rỗi).
+
+4. **Bài Tập 13**  
+   Liệt kê một số “tài nguyên miễn phí” mà hầu hết các thiết kế đều có thể tận dụng (trọng lực, nhiệt độ môi trường, ánh sáng mặt trời, rung động từ môi trường, v.v.). Đề xuất cách chúng có thể được sử dụng trong một sản phẩm hàng ngày.
+
+**Tài liệu Tham Khảo cho Chương 7**  
+1. B. Zlotin và A. Zusman. *The Concept of Resources in TRIZ: Past, Present and Future.* Ideation International, 2005.  
+2. Các tài liệu bổ sung từ [http://trizinstructor.com/materials/level-1-book](http://trizinstructor.com/materials/level-1-book)
+

@@ -1,0 +1,12 @@
+### Introduction to TensorFlow Playground
+
+[TensorFlow Playground](https://playground.tensorflow.org/) is an interactive web-based tool designed to help users understand the inner workings of neural networks. It provides a visual and intuitive interface for experimenting with various neural network architectures and parameters without needing to write any code. This educational tool allows users to see how changes to hyperparameters and network structure affect the model's performance on simple datasets.
+
+### Key Features
+
+![](images/Screenshot%202024-06-07%20at%2000.46.48.png)
+
+-   **Interactive Visualization**: Users can visualize the data, the decision boundaries formed by the neural network, and how these boundaries evolve as the network trains.
+-   **Real-time Feedback**: Observe how changing hyperparameters and network structure in real-time impacts the training process and model performance.
+-   **Educational Tool**: Ideal for students, educators, and anyone new to machine learning who wants to gain a deeper understanding of neural networks.
+

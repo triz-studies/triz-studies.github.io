@@ -1,0 +1,79 @@
+
+---
+
+<a name="chapter-6"></a>
+
+# **Chương 6**  
+## Mâu Thuẫn Vật Lý
+
+### 6.1 Mâu Thuẫn Vật Lý Là Gì?
+
+**Mâu Thuẫn Vật Lý** xảy ra khi **một** thông số của một thành phần phải tồn tại ở **hai trạng thái trái ngược**:
+
+- “Màn hình phải **lớn** (để dễ nhìn) VÀ **nhỏ** (để tiện mang theo).”  
+- “Cà phê phải **nóng** (để thưởng thức hương vị) VÀ **mát** (để không làm bỏng miệng).”
+
+Khác với Mâu Thuẫn Kỹ Thuật (nơi hai **thông số khác nhau** đối lập nhau), Mâu Thuẫn Vật Lý tập trung vào **một** thông số yêu cầu tồn tại ở hai trạng thái đối nghịch.
+
+### 6.2 Diễn Đạt Mâu Thuẫn Vật Lý
+
+Cấu trúc chung:
+
+> Thông số phải là **A+** để [lý do],  
+> **VÀ**  
+> Thông số phải là **A–** để [lý do].
+
+Nếu một trong hai lý do không hợp lý, thì bạn chưa có một Mâu Thuẫn Vật Lý thực sự.
+
+### 6.3 Giải Quyết Mâu Thuẫn Vật Lý
+
+TRIZ đưa ra một **thuật toán** để loại bỏ hoặc tách rời yêu cầu mâu thuẫn:
+
+1. **Tách Rời Trong Không Gian**: Cho phép thông số là A+ ở một vùng và A– ở vùng khác.  
+2. **Tách Rời Trong Thời Gian**: Cho phép thông số là A+ vào một thời điểm và A– vào thời điểm khác.  
+3. **Tách Rời Theo Mối Quan Hệ**: A+ đối với một người quan sát/vật, A– đối với người/vật khác.  
+4. **Tách Rời Theo Hướng**: A+ theo một hướng, A– theo hướng khác.  
+5. **Tách Rời Ở Cấp Độ Hệ Thống**: Chuyển giao hoặc biến đổi chức năng để loại bỏ mâu thuẫn.  
+6. **Thỏa Mãn Yêu Cầu Mâu Thuẫn Đồng Thời**: Sử dụng vật liệu hoặc hiện tượng vật lý tiên tiến.  
+7. **Vượt Qua Yêu Cầu Mâu Thuẫn**: Thiết kế lại để thông số không còn quan trọng nữa.
+
+Mỗi cách tiếp cận này tương ứng với các **Nguyên Tắc Sáng Tạo**—ví dụ, “Làm Năng Động” (Nguyên Tắc #15) thường hỗ trợ **Tách Rời Trong Thời Gian**.
+
+### 6.4 Ví Dụ: Ống Venturi của Túi Lọc Bụi
+
+Một ống Venturi trong máy hút bụi cần có **đường kính nhỏ** (để tạo lực hút làm sạch) nhưng cũng cần có **đường kính lớn** (để giảm sức cản dòng chảy khi hoạt động bình thường). Để giải quyết Mâu Thuẫn Vật Lý này, có thể:
+
+- **Tách Rời Trong Thời Gian**: Ống thay đổi đường kính giữa chế độ làm sạch và chế độ lọc (ví dụ: sử dụng một phần có thể bơm nở hoặc co lại).  
+- **Tách Rời Trong Không Gian**: Thiết kế vùng kép với một lỗ nhỏ bên trong một vỏ lớn hơn.
+
+### 6.5 Các Bước Xử Lý Mâu Thuẫn Vật Lý
+
+1. Xác định thông số đơn lẻ có yêu cầu trái ngược.  
+2. Rõ ràng chứng minh từng trạng thái trái ngược.  
+3. Thử các phương pháp **Tách Rời**: theo không gian, thời gian, hướng, mối quan hệ hoặc cấp hệ thống.  
+4. Nếu chưa đủ, hãy cân nhắc các giải pháp sáng tạo hơn—như sử dụng các vật liệu đặc biệt có khả năng thích ứng (ví dụ: hợp kim nhớ hình).
+
+### 6.6 Liên Kết Với Bản Thảo Thứ Hai
+
+Mâu Thuẫn Vật Lý thường xuất hiện trong những bài toán TRIZ cấp cao hoặc những thách thức thực sự. Nhiều phát minh được cấp bằng sáng chế vĩ đại nhất là kết quả của việc giải quyết một “yêu cầu phải X và không-X” một cách tinh tế. Bản thảo thứ hai nêu ra các ví dụ như:
+
+- **Kích Thước Điện Thoại Di Động**: “Lớn để gõ phím dễ dàng, nhỏ để dễ mang theo.” → dẫn đến các dòng điện thoại có thiết kế gập, bàn phím trượt, cuối cùng là điện thoại màn hình cảm ứng.  
+- **Mái Xe Ô Tô**: “Mở ra để có không khí trong lành, đóng lại để bảo vệ khỏi thời tiết.” → dẫn đến các giải pháp như cửa sổ trời, mui trần, kính panoramic với khả năng điều chỉnh độ tối.
+
+### 6.7 Kết Luận
+
+Mâu Thuẫn Vật Lý là hình thức xung đột tinh khiết nhất trong một thông số đơn lẻ. Thành thạo các chiến lược tách rời sẽ mở ra những đổi mới tiên tiến, thường giúp đạt được điều tốt nhất của cả hai trạng thái mà người khác chỉ nhận được một nửa.
+
+---
+
+#### Bài Tập cho Chương 6
+
+1. **Các Câu Hỏi Kiểm Tra**  
+   1. Trong Mâu Thuẫn Vật Lý có bao nhiêu thông số liên quan?  
+   2. So sánh Mâu Thuẫn Vật Lý với Mâu Thuẫn Kỹ Thuật.  
+   3. Nêu tên các nguyên tắc tách rời chính trong TRIZ.  
+   4. Cho một ví dụ hàng ngày về Mâu Thuẫn Vật Lý.
+
+2. **Bài Tập 10**  
+   Xem lại “mẹo lấy tờ tiền \$100 dưới chai”. Hãy mô hình hóa nó như một **Mâu Thuẫn Vật Lý** (gợi ý: “Chiếc chai phải giữ vững ổn định VÀ phải có thể di chuyển…”). Sau đó, áp dụng các nguyên tắc tách rời—bạn có nghĩ ra được ý tưởng mới nào không?
+

@@ -1,0 +1,144 @@
+
+---
+
+<a name="chapter-2"></a>
+
+# **Chương 2**  
+## Phân Tích Chức Năng của Thiết Bị
+
+### Tổng Quan Chương
+
+- **Hệ thống và hệ thống lớn hơn (supersystem) là gì?**  
+- **Phân Tích Chức Năng là gì và tại sao cần thực hiện nó?**  
+- **Các giai đoạn của Phân Tích Chức Năng (FA)**  
+- **Sử dụng Phân Tích Chức Năng để khám phá và ưu tiên các vấn đề**
+
+Phân Tích Chức Năng (FA) là trung tâm của TRIZ. Nó loại bỏ các chi tiết bên ngoài để hé lộ cách mà các bộ phận của một hệ thống **thực sự** tương tác với nhau. TRIZ cũng khuyến khích “tách rời chức năng khỏi vật mang chức năng” — bất kỳ bộ phận nào cũng có thể được thay thế hoặc sửa đổi miễn là **chức năng** được giữ lại.
+
+### 2.1 Hệ Thống, Hệ Thống Lớn Hơn và Các Định Nghĩa
+
+- **Hệ Thống Kỹ Thuật:** Là một hệ thống do con người tạo ra, được thiết kế để thực hiện một chức năng chính cụ thể (ví dụ: bút để viết).  
+- **Hệ Thống Lớn Hơn (Supersystem):** Là môi trường chứa hệ thống kỹ thuật (ví dụ: bàn tay, bàn làm việc, không khí, v.v.).
+
+Xác định **biên giới** là rất quan trọng. Bạn cần quyết định các yếu tố nào thuộc “bên trong” (là một phần của hệ thống) và các yếu tố bên ngoài từ hệ thống lớn hơn có tác động đáng kể tới hệ thống.
+
+### 2.2 Phân Tích Chức Năng Là Gì?
+
+**Phân Tích Chức Năng (FA)** là một phương pháp để:
+
+1. Xác định tất cả các **bộ phận** của hệ thống (và các yếu tố của hệ thống lớn hơn được chọn).  
+2. Xác định **các chức năng** mà mỗi bộ phận thực hiện (có ích hoặc có hại).  
+3. Kiểm tra **những bất lợi của chức năng** (chức năng gây hại hoặc chức năng có ích không đạt yêu cầu/quá mức).  
+4. Tìm ra cơ hội để cải tiến, loại bỏ hoặc đổi mới.
+
+#### Kết Quả Chính
+
+- Một **Mô Hình Chức Năng** thể hiện cách các bộ phận tương tác với nhau.  
+- Một danh sách các **bất lợi chức năng** cần giải quyết, làm cơ sở cho các phân tích sâu hơn hoặc cải tiến trực tiếp.
+
+### 2.3 Các Giai Đoạn của Phân Tích Chức Năng
+
+1. **Phân Tích Thành Phần**  
+2. **Phân Tích Tương Tác**  
+3. **Mô Hình Hóa Chức Năng**  
+4. *(Tùy chọn)* **Phân Tích Giá Trị (Chi Phí)** để xếp hạng các bộ phận theo mức độ quan trọng so với chi phí.
+
+#### 2.3.1 Phân Tích Thành Phần
+
+- Xác định **biên giới của hệ thống**.  
+- **Liệt kê các thành phần của hệ thống**: Với các thiết bị lớn, hãy chia nhỏ chúng thành các hệ thống con hợp lý. Cố gắng giữ số lượng thành phần ở mức quản lý được (khoảng 20–25 thành phần nếu có thể).  
+- **Liệt kê các thành phần của hệ thống lớn hơn**: Chỉ bao gồm những thành phần có vai trò về mặt vật lý hoặc chức năng (ví dụ: bàn tay của người dùng, không khí, bàn, v.v.).
+
+| Hệ Thống Kỹ Thuật: “Chai” | Các Thành Phần của Hệ Thống | Các Thành Phần của Hệ Thống Lớn Hơn |
+|---|---|---|
+|  | - Thân chai | - Nước, bụi, không khí, trọng lực |
+|  | - Nắp chai  | - (Bàn tay của người dùng nếu cần) |
+
+#### 2.3.2 Phân Tích Tương Tác
+
+- Tạo một **Ma Trận Tương Tác** với các thành phần được liệt kê ở hàng và cột.  
+- Đánh dấu “+” nếu hai thành phần **tiếp xúc** hoặc tương tác, “–” nếu không tương tác.  
+- Chỉ những cặp có dấu “+” mới có thể có một **chức năng**.
+
+#### 2.3.3 Mô Hình Hóa Chức Năng
+
+Một **chức năng** được hiểu là một **vật mang chức năng** tác động lên một **mục tiêu** theo cách làm thay đổi hoặc duy trì một thông số của mục tiêu.  
+- *Động cơ quay trục.*  
+- *Vít giữ nắp đậy.*  
+- *Bộ phận làm nóng đun sôi nước.*  
+
+Xác định các chức năng **có ích** và **gây hại**. Ghi chú mức độ thực hiện nếu một chức năng không đủ hoặc quá mức.
+
+##### Chức Năng Chính
+
+Mỗi hệ thống đều có một **Chức Năng Chính** — lý do tồn tại của nó (ví dụ: máy khoan tạo lỗ, ghế hỗ trợ việc ngồi, v.v.). Thường thì mục tiêu của chức năng chính thuộc về **hệ thống lớn hơn**.
+
+#### 2.3.4 Xếp Hạng & Phân Tích Giá Trị
+
+1. **Xếp hạng các chức năng** (chức năng cơ bản = 3 điểm, chức năng bổ sung = 2, chức năng phụ = 1).  
+2. **Tính tổng điểm** của các chức năng của từng thành phần → tổng đóng góp của thành phần đó cho hệ thống.  
+3. **So sánh** với chi phí, trọng lượng hoặc một chỉ số liên quan khác của thành phần.  
+4. Vẽ **Sơ Đồ Giá Trị – Chi Phí** để xác định sự không cân xứng: chi phí cao nhưng chức năng thấp hoặc ngược lại.
+
+### 2.4 Trình Bày Mô Hình Chức Năng
+
+1. **Dạng Bảng:** Phù hợp nhất với các hệ thống lớn.  
+2. **Dạng Đồ Thị:** Các thành phần được thể hiện như các nút, các mũi tên biểu thị chức năng, kèm theo nhãn “động từ” (ví dụ: “hỗ trợ”, “làm nóng”).
+
+### 2.5 Những Quan Điểm Bổ Sung Từ Bản Thảo Thứ Hai
+
+Từ góc nhìn TRIZ rộng hơn, **Phân Tích Chức Năng** có mối liên hệ chặt chẽ với **Phân Tích Mâu Thuẫn Gốc (RC+)** hoặc các công cụ nguyên nhân – hệ quả nâng cao trong TRIZ cấp cao hơn. Ở Level 1, trọng tâm của bạn là:
+
+- Xác định vai trò **có ích** và **gây hại** của từng thành phần.  
+- Tập trung vào **chức năng tiêu cực** hoặc hiệu suất kém.  
+
+Sự rõ ràng này tạo nền tảng cho việc **định nghĩa vấn đề** — mô hình chức năng càng rõ ràng thì các giải pháp tiếp theo càng hiệu quả.
+
+### 2.6 Kết Luận và Các Thuật Ngữ Chính
+
+- **Hệ Thống Kỹ Thuật, Hệ Thống Lớn Hơn:** Hiểu rõ biên giới.  
+- **Chức Năng:** Dạng Chủ – Động Từ – Tân ngữ; có thể có ích hoặc gây hại.  
+- **Bất Lợi Chức Năng:** Là chức năng gây hại hoặc chức năng có ích nhưng không đạt đủ hoặc vượt quá mức cần thiết.  
+- **Phân Tích Giá Trị:** So sánh giữa chức năng của thành phần và chi phí để ưu tiên cải tiến hoặc loại bỏ.
+
+Phân Tích Chức Năng là **bước đầu tiên** trong giải quyết vấn đề theo TRIZ. Nó giúp xác định **những gì** hệ thống thực hiện và **nơi** các vấn đề phát sinh, mở đường cho các phương pháp nâng cao như **Phân Tích Nguyên Nhân – Hệ Quả**, **Loại Bỏ Phần Thừa**, hay giải quyết **Mâu Thuẫn**.
+
+---
+
+#### Bài Tập cho Chương 2
+
+1. **Các Câu Hỏi Kiểm Tra**  
+   1. Hệ thống kỹ thuật là gì?  
+   2. Hệ thống lớn hơn (supersystem) là gì?  
+   3. Phân Tích Chức Năng là gì?  
+   4. Các giai đoạn của Phân Tích Chức Năng là gì?  
+   5. Chức năng chính của một hệ thống kỹ thuật là gì?  
+   6. Làm thế nào để định nghĩa “bất lợi chức năng”?
+
+2. **Bài Tập 1**  
+   Liệt kê các thành phần của hệ thống lớn hơn cho các hệ thống kỹ thuật sau (chọn môi trường sử dụng điển hình):  
+   - Lốp xe hơi  
+   - Lò nung  
+   - Bóng đèn tiết kiệm năng lượng  
+   - Máy khoan  
+   - Bút
+
+3. **Bài Tập 2**  
+   Hệ thống phanh của một chiếc xe đạp kéo dài khoảng cách phanh vì phanh không dừng bánh xe hiệu quả. Thực hiện một **Phân Tích Chức Năng** cho hệ thống phanh. Trình bày kết quả dưới dạng **bảng** và **đồ thị**.
+
+4. **Bài Tập 3**  
+   Xác định các chức năng chính của các hệ thống kỹ thuật sau:  
+   - Báo chí  
+   - Giá treo quần áo  
+   - Lò nướng  
+   - Đồng hồ  
+   - Điều khiển từ xa của TV  
+   - Máy hút bụi
+
+5. **Bài Tập 4**  
+   Thực hiện **Phân Tích Chức Năng** cho một cặp kính thông thường (gồm kính, cuống tai, khung). Sau đó ước tính tỷ lệ chi phí của mỗi thành phần (ví dụ: kính = 70%, khung = 20%, cuống tai = 10%), và vẽ **Sơ Đồ Giá Trị – Chi Phí**. Thành phần nào bạn có thể cân nhắc loại bỏ hoặc sửa đổi?
+
+---
+
+<a name="chapter-3"></a>
+

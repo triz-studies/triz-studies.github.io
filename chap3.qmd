@@ -1,0 +1,58 @@
+
+# **Chương 3**  
+## Giới Thiệu Về Phân Tích Chuỗi Nguyên Nhân – Hệ Quả
+
+### 3.1 CECA Trong Lộ Trình TRIZ
+
+Sau khi hoàn thành **Phân Tích Chức Năng**, bạn thường có một danh sách các **bất lợi chức năng** — có thể là những vấn đề nhỏ hay những vấn đề nghiêm trọng. **Phân Tích Chuỗi Nguyên Nhân – Hệ Quả (CECA)** (còn được gọi là Phân Tích Nguyên Nhân Gốc hay “5 Whys”) giúp bạn thấy được cách những bất lợi này liên kết với nhau, từ đó xác định được **Các Bất Lợi Chủ Chốt** gây ra nhiều vấn đề ở cấp độ tiếp theo.
+
+### 3.2 CECA Là Gì và Tại Sao Sử Dụng Nó?
+
+**Phân Tích Chuỗi Nguyên Nhân – Hệ Quả** xây dựng một “cây” (hoặc “chuỗi”) nguyên nhân đằng sau một vấn đề:
+
+- **Bất Lợi Ban Đầu**: Vấn đề cấp cao mà bạn bắt đầu (ví dụ: “quy trình sản xuất quá tốn kém”, “sản phẩm quá nóng”).  
+- **Bất Lợi Chủ Chốt**: Nguyên nhân gốc rễ mà nếu được giải quyết sẽ loại bỏ được nhiều vấn đề cấp cao.
+
+Bằng cách liên tục hỏi “Tại sao?” (và thỉnh thoảng sử dụng các nhánh **VÀ** / **HOẶC**), bạn sẽ hé lộ được các yếu tố sâu xa hơn đang thúc đẩy vấn đề ban đầu.
+
+### 3.3 Các Bước Trong CECA
+
+1. **Nêu Rõ Bất Lợi Ban Đầu**: Diễn đạt mục tiêu dự án của bạn dưới dạng tiêu cực (“chi phí sản xuất quá cao”, “thiết bị quá dễ hỏng”).  
+2. **Hỏi “Tại Sao?”**: Với mỗi bất lợi, tìm ra nguyên nhân trực tiếp. Nếu có nhiều nguyên nhân độc lập, hãy nối chúng bằng “HOẶC”. Nếu cần phải cùng tồn tại thì dùng “VÀ”.  
+3. **Lặp Lại**: Tiếp tục đào sâu từng nhánh cho đến khi bạn đạt đến một hiện tượng không thể thay đổi (một định luật vật lý cơ bản hoặc yếu tố bên ngoài nằm ngoài phạm vi kiểm soát).  
+4. **Đánh Dấu Các Bất Lợi Chủ Chốt**: Các nguyên nhân gốc rễ có tác động lớn nhất. Việc giải quyết một bất lợi chủ chốt thường làm giảm hoặc loại bỏ các bất lợi ở cấp cao hơn.
+
+### 3.4 Ví Dụ Về CECA
+
+**Vấn đề**: “Hệ thống làm sạch khí của lò nung quá tốn kém.”  
+- Qua CECA, bạn khám phá ra từng yếu tố chính gây ra chi phí cao, và mỗi yếu tố có thể có nhiều nguyên nhân phụ. Nếu “quá mức sử dụng nước” xuất hiện ở hai nhánh, thì giải quyết nguyên nhân đó có thể giảm đáng kể chi phí ở nhiều mặt.
+
+### 3.5 Những Quan Điểm Bổ Sung Từ Bản Thảo Thứ Hai
+
+Trong TRIZ nâng cao (Levels 2–3), bạn có thể sử dụng sơ đồ **RC+ (Phân Tích Mâu Thuẫn Gốc)**, kết hợp bản đồ nguyên nhân – hệ quả với khái niệm **mâu thuẫn**. Ở Level 1, một CECA đơn giản là đủ: nó giúp bạn quyết định **vấn đề nào** thật sự đáng để giải quyết và hé lộ mối liên hệ giữa các vấn đề khác nhau.
+
+### 3.6 Kết Luận
+
+CECA giúp bạn tập trung vào **vài Bất Lợi Chủ Chốt** có tác động lớn nhất. Cho dù bạn giải quyết chúng bằng cách **Loại Bỏ Phần Thừa** hay sử dụng các phương pháp giải quyết **Mâu Thuẫn**, kết quả thu được sẽ có tác động đáng kể.
+
+---
+
+#### Bài Tập cho Chương 3
+
+1. **Các Câu Hỏi Kiểm Tra**  
+   1. Chuỗi Nguyên Nhân – Hệ Quả là gì?  
+   2. Làm thế nào để định nghĩa Bất Lợi Ban Đầu?  
+   3. Bất Lợi Chủ Chốt là gì?  
+   4. Các toán tử “VÀ” và “HOẶC” hỗ trợ như thế nào trong CECA?  
+   5. Khi nào nên dừng lại việc xây dựng chuỗi?
+
+2. **Bài Tập 5**  
+   (Tình huống hài hước) Hãy xây dựng một CECA cho chuỗi sự cố hài hước—ví dụ: “Fergus làm đổ súp, khiến Bá tước tức giận, dẫn đến một cuộc ẩu đả…” Xác định xem nguyên nhân gốc rễ nằm ở đâu.
+
+3. **Bài Tập 6**  
+   Bạn làm rách áo trong khi ủi. Xây dựng một CECA (với các toán tử VÀ/HOẶC nếu cần) để tìm ra tất cả các nguyên nhân gốc rễ có thể (ví dụ: “nhiệt độ quá cao”, “ủi để yên một chỗ quá lâu”, “vải quá mỏng”, v.v.).
+
+---
+
+<a name="chapter-4"></a>
+

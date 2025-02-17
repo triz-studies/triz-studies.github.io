@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "basic-TRIZ"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: chap1.qmd
+        text: Chương 1
+      - href: chap2.qmd
+        text: Chương 2
+      - href: chap3.qmd
+        text: Chương 3
+      - href: chap4.qmd
+        text: Chương 4
+      - href: chap5.qmd
+        text: Chương 5
+      - href: chap6.qmd
+        text: Chương 6
+      - href: chap7.qmd
+        text: Chương 7
+      - href: chap8.qmd
+        text: Chương 8
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

@@ -1,0 +1,90 @@
+
+# **Chương 4**  
+## Loại Bỏ Phần Thừa (Trimming) Cho Thiết Bị
+
+### 4.1 Tổng Quan: Loại Bỏ Phần Thừa Như Một Chiến Lược Đột Phá
+
+Sau khi bạn xác định được **Các Bất Lợi Chủ Chốt** (xem Chương 3) hoặc nhận thấy các thành phần có giá trị thấp (từ **Phân Tích Chức Năng**), bạn có thể đơn giản **loại bỏ** những thành phần gây ra vấn đề. Điều này có thể mạnh mẽ hơn việc “sửa chữa” chúng vì nó giúp giảm độ phức tạp, chi phí, và đôi khi loại bỏ chính nguồn gốc của vấn đề trong hệ thống.
+
+**Loại Bỏ Phần Thừa** trong TRIZ là phương pháp có hệ thống để loại bỏ các thành phần không cần thiết trong khi đảm bảo rằng tất cả các chức năng cần thiết vẫn được duy trì—được chuyển giao sang các thành phần khác hoặc sang hệ thống lớn hơn.
+
+### 4.2 Quyết Định Loại Bỏ Thành Phần Nào
+
+- **Tiết Kiệm Chi Phí:** Nếu dự án của bạn nhằm giảm chi phí, hãy xem xét các thành phần có **chi phí cao nhưng chức năng thấp** (vị trí ở Quadrant D trong Sơ Đồ Giá Trị – Chi Phí của bạn).  
+- **Tập Trung Vào Nguyên Nhân Gốc:** Nếu CECA cho thấy một thành phần gây ra một Bất Lợi Chủ Chốt, hãy cân nhắc loại bỏ nó.  
+- **Tập Trung Vào Hiệu Suất:** Một số thành phần gây ra trọng lượng hoặc độ phức tạp vượt mức, việc loại bỏ chúng có thể cải thiện hiệu suất.
+
+### 4.3 Các Quy Tắc Loại Bỏ Phần Thừa (A, B, C)
+
+TRIZ định nghĩa ba “quy tắc” cơ bản cho phép bạn loại bỏ vật mang chức năng của một thành phần mà không làm mất đi chức năng cần thiết:
+
+1. **Quy Tắc A:** Loại bỏ vật mang chức năng nếu bạn cũng loại bỏ mục tiêu của chức năng đó.  
+   - Mang tính cách mạng: loại bỏ đồng thời hai thành phần.  
+   - Ví dụ: “Nếu cuống tai chỉ có chức năng giữ khung, có thể loại bỏ hoàn toàn hệ thống khung – cuống tai để thay thế bằng kính áp tròng.”
+
+2. **Quy Tắc B:** Loại bỏ vật mang chức năng nếu **mục tiêu có thể tự thực hiện chức năng của mình** (“tự phục vụ”).  
+   - Ví dụ: “Khung tự giữ được bản thân nó,” tức là một thiết kế bám vào mũi mà không cần cuống tai riêng biệt.
+
+3. **Quy Tắc C:** Loại bỏ vật mang chức năng nếu **một thành phần khác** có thể thực hiện chức năng đó.  
+   - Phương án phổ biến nhất.  
+   - Chuyển giao chức năng sang một thành phần hiện có khác hoặc sang yếu tố của hệ thống lớn hơn (như bàn tay người dùng, hoặc trường vật lý như trọng lực).
+
+### 4.4 Loại Bỏ Toàn Bộ vs. Loại Bỏ Một Phần
+
+- **Loại Bỏ Toàn Bộ:** Loại bỏ hoàn toàn một thành phần và tất cả các chức năng của nó.  
+- **Loại Bỏ Một Phần:** Chuyển giao một số chức năng sang nơi khác, giữ lại chỉ một vài chức năng quan trọng của thành phần đó.
+
+### 4.5 Các Bước Thực Hiện Loại Bỏ Phần Thừa
+
+1. **Chọn thành phần** để loại bỏ (dựa trên chi phí, bất lợi hoặc cả hai).  
+2. **Liệt kê các chức năng có ích** của nó.  
+3. **Áp dụng Quy Tắc A, B hoặc C** cho từng chức năng.  
+4. **Chuyển giao** chức năng sang vật mang chức năng mới (hoặc tự phục vụ, hoặc loại bỏ hoàn toàn mục tiêu).  
+5. Xác định **Vấn Đề Loại Bỏ Phần Thừa** phát sinh: “Làm sao để vật mang chức năng mới thực hiện chức năng đó một cách hiệu quả?”  
+6. **Lặp lại** quy trình với các thành phần khác nếu cần.
+
+Những “Vấn Đề Loại Bỏ Phần Thừa” này có thể dẫn đến mâu thuẫn (ví dụ: “Chúng ta muốn chuyển giao chức năng này sang một thành phần hiện có, nhưng thành phần đó đã quá tải!”). Khi đó, bạn sẽ tiến hành với các phương pháp giải quyết **Mâu Thuẫn Kỹ Thuật** hoặc **Mâu Thuẫn Vật Lý**.
+
+### 4.6 Ví Dụ Về Loại Bỏ Phần Thừa: Kính
+
+- Cuống tai gây khó chịu.  
+- Cuống tai chỉ thực hiện một chức năng chính: “giữ khung kính.”  
+- **Quy Tắc A**: Loại bỏ cuống tai và khung → chuyển sang kính áp tròng hoặc một loại kính đơn.
+- **Quy Tắc B**: Khung tự giữ được chính nó → thiết kế kiểu pince-nez.
+- **Quy Tắc C**: Một thành phần khác (như bàn tay hoặc cơ mặt của người dùng) giữ các thấu kính → thiết kế kiểu lorgnette.
+
+Mỗi trường hợp dẫn đến một ý tưởng thiết kế khác nhau, minh họa cách Loại Bỏ Phần Thừa khuyến khích những giải pháp sáng tạo.
+
+### 4.7 Ví Dụ Thực Tế Về Loại Bỏ Phần Thừa: Hệ Thống Làm Sạch Khí Công Nghiệp
+
+Một hệ thống làm sạch khí của lò nung sử dụng lượng nước khổng lồ, làm tăng chi phí. Bằng cách **loại bỏ nước** (nguyên nhân gốc của nhiều vấn đề chi phí), chức năng “bắt bụi” phải được chuyển giao sang giải pháp **dựa trên dầu** hoặc **cơ học**. Hành động đơn lẻ này đã giảm tiêu thụ nước, tránh được chi phí xử lý bùn, và cải thiện hiệu quả tổng thể.
+
+### 4.8 Sự Liên Kết với Bản Thảo Thứ Hai
+
+**Loại Bỏ Phần Thừa** liên quan mật thiết đến **Tính Lý Tưởng**. Bằng cách loại bỏ các phần không cần thiết (và các chi phí/chức năng gây hại của chúng), hệ thống trở nên đơn giản hơn, tiến gần hơn đến trạng thái lý tưởng. Ở các cấp độ TRIZ cao hơn, bạn có thể kết hợp với **Xu Hướng Tiến Hóa** để dự báo cách hệ thống sẽ phát triển sau khi loại bỏ một số thành phần nhất định.
+
+### 4.9 Kết Luận và Các Thuật Ngữ Chính
+
+- **Loại Bỏ Phần Thừa (Trimming):** Quá trình loại bỏ vật mang chức năng của một thành phần trong khi vẫn duy trì các chức năng cần thiết.  
+- **Quy Tắc A, B, C:** Các khung lý thuyết cơ bản cho phép chức năng được giữ lại sau khi loại bỏ vật mang ban đầu.  
+- **Vấn Đề Loại Bỏ Phần Thừa:** Mỗi chức năng được chuyển giao có thể tạo ra nhiệm vụ sáng tạo mới hoặc mâu thuẫn cần giải quyết.
+
+Sử dụng một cách thông minh, Loại Bỏ Phần Thừa thường dẫn đến những bước nhảy vọt về giảm chi phí, độ tin cậy, và tính thân thiện với người dùng—những đặc trưng của các giải pháp **sáng tạo** thực sự.
+
+---
+
+#### Bài Tập cho Chương 4
+
+1. **Các Câu Hỏi Kiểm Tra**  
+   1. Loại Bỏ Phần Thừa trong TRIZ là gì?  
+   2. Khi nào bạn sẽ áp dụng Loại Bỏ Phần Thừa?  
+   3. Ba Quy Tắc Loại Bỏ Phần Thừa (A, B, C) là gì?  
+   4. Sự khác biệt giữa Loại Bỏ Toàn Bộ và Loại Bỏ Một Phần là gì?  
+   5. Làm thế nào Loại Bỏ Phần Thừa liên hệ với tính lý tưởng của hệ thống?
+
+2. **Bài Tập 7**  
+   Thực hiện một **Phân Tích Chức Năng** cho một ống tiêm kinh điển (kim tiêm, ống xi, bầu đẩy). Đề xuất cách loại bỏ phần thừa của hệ thống sử dụng cả ba quy tắc, tạo ra nhiều ý tưởng thiết kế khác nhau.
+
+3. **Bài Tập 8**  
+   Áp dụng **Loại Bỏ Phần Thừa** cho một bàn chải đánh răng (lông bàn chải, đầu bàn chải, tay cầm). Đề xuất một phương án “loại bỏ phần thừa toàn diện” và một phương án “loại bỏ phần thừa một phần”. Những mâu thuẫn mới nào có thể phát sinh và làm thế nào để giải quyết chúng?
+
