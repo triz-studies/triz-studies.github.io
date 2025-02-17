@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>basic-DL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">basic-DL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index1.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../DL-intro.html"> 
+<span class="menu-text">DL-Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Aplications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../intro_pytorch.html"> 
+<span class="menu-text">Intro Pytorch</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../DL-detail.html"> 
+<span class="menu-text">DL-detail</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tensor_playground.html"> 
+<span class="menu-text">Playground</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Handon1.html"> 
+<span class="menu-text">Hand on 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Handon2.html"> 
+<span class="menu-text">Hand on 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Handon3.html"> 
+<span class="menu-text">Hand on 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Handon4.html"> 
+<span class="menu-text">Hand on 4</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-neural-networks" id="toc-introduction-to-neural-networks" class="nav-link active" data-scroll-target="#introduction-to-neural-networks">Introduction to Neural Networks</a></li>
+  <li><a href="#layers-in-a-neural-network" id="toc-layers-in-a-neural-network" class="nav-link" data-scroll-target="#layers-in-a-neural-network">Layers in a Neural Network</a></li>
+  <li><a href="#activation-functions" id="toc-activation-functions" class="nav-link" data-scroll-target="#activation-functions">Activation Functions</a></li>
+  <li><a href="#forward-propagation" id="toc-forward-propagation" class="nav-link" data-scroll-target="#forward-propagation">Forward Propagation</a></li>
+  <li><a href="#loss-function" id="toc-loss-function" class="nav-link" data-scroll-target="#loss-function">Loss Function</a></li>
+  <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
+  <li><a href="#introduction-to-neural-networks-with-pytorch" id="toc-introduction-to-neural-networks-with-pytorch" class="nav-link" data-scroll-target="#introduction-to-neural-networks-with-pytorch">Introduction to Neural Networks with PyTorch</a>
+  <ul class="collapse">
+  <li><a href="#loss-function-and-optimization" id="toc-loss-function-and-optimization" class="nav-link" data-scroll-target="#loss-function-and-optimization">Loss Function and Optimization</a></li>
+  <li><a href="#local-minimum-vs.-global-minimum" id="toc-local-minimum-vs.-global-minimum" class="nav-link" data-scroll-target="#local-minimum-vs.-global-minimum">Local Minimum vs.&nbsp;Global Minimum</a></li>
+  <li><a href="#challenges-with-local-minima" id="toc-challenges-with-local-minima" class="nav-link" data-scroll-target="#challenges-with-local-minima">Challenges with Local Minima</a></li>
+  <li><a href="#why-use-the-adam-optimizer" id="toc-why-use-the-adam-optimizer" class="nav-link" data-scroll-target="#why-use-the-adam-optimizer">Why Use the Adam Optimizer?</a></li>
+  <li><a href="#general-structure-of-constructing-and-training-a-deep-learning-model" id="toc-general-structure-of-constructing-and-training-a-deep-learning-model" class="nav-link" data-scroll-target="#general-structure-of-constructing-and-training-a-deep-learning-model">General Structure of Constructing and Training a Deep Learning Model</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="introduction-to-neural-networks" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-neural-networks">Introduction to Neural Networks</h3>
+<p>Neural networks are computational models inspired by the human brain. They consist of layers of interconnected nodes (neurons) where each connection has an associated weight. The basic flow in a neural network involves:</p>
+<ol type="1">
+<li><strong>Forward Propagation</strong>: Input data passes through the network layers to produce an output.</li>
+<li><strong>Loss Calculation</strong>: The output is compared with the actual target to compute the loss.</li>
+<li><strong>Backpropagation</strong>: The network adjusts the weights to minimize the loss.</li>
+</ol>
+</section>
+<section id="layers-in-a-neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="layers-in-a-neural-network">Layers in a Neural Network</h3>
+<p>A neural network typically has:</p>
+<ol type="1">
+<li><strong>Input Layer</strong>: Receives the input data.</li>
+<li><strong>Hidden Layers</strong>: Intermediate layers that process the inputs.</li>
+<li><strong>Output Layer</strong>: Produces the final output.</li>
+</ol>
+</section>
+<section id="activation-functions" class="level3">
+<h3 class="anchored" data-anchor-id="activation-functions">Activation Functions</h3>
+<p>Activation functions introduce non-linearity into the network, allowing it to learn complex patterns. Common activation functions include:</p>
+<ul>
+<li><strong>ReLU (Rectified Linear Unit)</strong>: ( f(x) = (0, x) )</li>
+<li><strong>Sigmoid</strong>: ( f(x) = )</li>
+<li><strong>Tanh</strong>: ( f(x) = (x) )</li>
+</ul>
+</section>
+<section id="forward-propagation" class="level3">
+<h3 class="anchored" data-anchor-id="forward-propagation">Forward Propagation</h3>
+<p>During forward propagation, inputs pass through each layer and activation function to produce the final output.</p>
+</section>
+<section id="loss-function" class="level3">
+<h3 class="anchored" data-anchor-id="loss-function">Loss Function</h3>
+<p>The loss function measures the difference between the predicted output and the actual target. Common loss functions include:</p>
+<ul>
+<li><strong>Mean Squared Error (MSE)</strong> for regression tasks.</li>
+<li><strong>Cross-Entropy Loss</strong> for classification tasks.</li>
+</ul>
+</section>
+<section id="backpropagation" class="level3">
+<h3 class="anchored" data-anchor-id="backpropagation">Backpropagation</h3>
+<p>Backpropagation updates the weights using the gradients of the loss function with respect to the weights.</p>
+</section>
+<section id="introduction-to-neural-networks-with-pytorch" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-neural-networks-with-pytorch">Introduction to Neural Networks with PyTorch</h2>
+<p>PyTorch is a popular open-source deep learning framework that offers a flexible and efficient platform for building and training neural networks. This guide introduces the basic concepts of neural networks, including forward propagation, different layers, activation functions, backpropagation, and loss functions, and demonstrates how to implement these concepts using PyTorch.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.optim <span class="im">as</span> optim</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a neural network with two hidden layers</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleNN(nn.Module):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(SimpleNN, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(<span class="dv">10</span>, <span class="dv">50</span>)  <span class="co"># First hidden layer</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.relu1 <span class="op">=</span> nn.ReLU()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(<span class="dv">50</span>, <span class="dv">50</span>)  <span class="co"># Second hidden layer</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.relu2 <span class="op">=</span> nn.ReLU()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(<span class="dv">50</span>, <span class="dv">1</span>)   <span class="co"># Output layer</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.fc1(x)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.relu1(x)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.fc2(x)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.relu2(x)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.fc3(x)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Instantiate the model</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> SimpleNN()</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random input data and targets</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> [torch.randn(<span class="dv">10</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>)]</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>targets <span class="op">=</span> [torch.tensor([<span class="fl">1.0</span>]) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>)]  <span class="co"># Example target</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data into training and test sets</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>train_inputs, test_inputs, train_targets, test_targets <span class="op">=</span> train_test_split(inputs, targets, test_size<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a loss function and optimizer</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>criterion <span class="op">=</span> nn.MSELoss()</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.SGD(model.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of epochs</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>num_epochs <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Training loop</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    total_loss <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="bu">input</span>, target <span class="kw">in</span> <span class="bu">zip</span>(train_inputs, train_targets):</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Forward pass</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        output <span class="op">=</span> model(<span class="bu">input</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> criterion(output, target)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Backward pass and optimization</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        optimizer.step()</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>        total_loss <span class="op">+=</span> loss.item()</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print average training loss</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>num_epochs<span class="sc">}</span><span class="ss">, Training Loss: </span><span class="sc">{</span>total_loss<span class="op">/</span><span class="bu">len</span>(train_inputs)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate on test set</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>test_loss <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():  <span class="co"># No need to compute gradients for testing</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="bu">input</span>, target <span class="kw">in</span> <span class="bu">zip</span>(test_inputs, test_targets):</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        output <span class="op">=</span> model(<span class="bu">input</span>)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> criterion(output, target)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        test_loss <span class="op">+=</span> loss.item()</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Print average test loss</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Average Test Loss: </span><span class="sc">{</span>test_loss<span class="op">/</span><span class="bu">len</span>(test_inputs)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="loss-function-and-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="loss-function-and-optimization">Loss Function and Optimization</h3>
+<p>In machine learning, the loss function (or cost function) measures how well the model’s predictions match the actual target values. The goal of training a neural network is to minimize this loss function.</p>
+</section>
+<section id="local-minimum-vs.-global-minimum" class="level3">
+<h3 class="anchored" data-anchor-id="local-minimum-vs.-global-minimum">Local Minimum vs.&nbsp;Global Minimum</h3>
+<ul>
+<li><strong>Global Minimum</strong>: This is the lowest possible point of the loss function. If we reach this point, the model parameters are optimal, and the model performs best on the training data.</li>
+<li><strong>Local Minimum</strong>: These are points where the loss function has a lower value than in its immediate vicinity, but not the lowest possible value. There can be multiple local minima.</li>
+</ul>
+</section>
+<section id="challenges-with-local-minima" class="level3">
+<h3 class="anchored" data-anchor-id="challenges-with-local-minima">Challenges with Local Minima</h3>
+<ul>
+<li><strong>Trapped in Local Minima</strong>: During training, the optimization algorithm might get trapped in a local minimum, preventing the model from reaching the global minimum.</li>
+<li><strong>Poor Generalization</strong>: Models trained in local minima might not generalize well to unseen data.</li>
+</ul>
+</section>
+<section id="why-use-the-adam-optimizer" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-the-adam-optimizer">Why Use the Adam Optimizer?</h3>
+<p><img src="images/0_yzu8rbl02p4JZSoG.gif" class="img-fluid"></p>
+<p>The Adam (Adaptive Moment Estimation) optimizer is an advanced optimization algorithm that combines the benefits of two other extensions of stochastic gradient descent: Adaptive Gradient Algorithm (AdaGrad) and Root Mean Square Propagation (RMSProp). Here’s why Adam is beneficial:</p>
+<ol type="1">
+<li><strong>Adaptive Learning Rates</strong>: Adam adjusts the learning rate for each parameter dynamically based on estimates of lower-order moments. This allows for efficient and effective training.</li>
+<li><strong>Momentum</strong>: Adam incorporates the concept of momentum, which helps to smooth out the update process by considering the past gradients, thus potentially avoiding local minima.</li>
+<li><strong>Bias Correction</strong>: Adam includes bias-correction mechanisms to ensure that the moment estimates are unbiased, particularly during the initial steps of training.</li>
+<li><strong>Computational Efficiency</strong>: Adam is computationally efficient and has low memory requirements, making it suitable for large-scale data and models.</li>
+<li><strong>Robustness</strong>: Adam works well with noisy data and sparse gradients, which are common in practical deep learning applications.</li>
+</ol>
+</section>
+<section id="general-structure-of-constructing-and-training-a-deep-learning-model" class="level3">
+<h3 class="anchored" data-anchor-id="general-structure-of-constructing-and-training-a-deep-learning-model">General Structure of Constructing and Training a Deep Learning Model</h3>
+<p>Here are the general steps to build and train a deep learning model:</p>
+<ol type="1">
+<li><strong>Define the Model Architecture</strong>
+<ul>
+<li>Specify the type of model (e.g., feedforward neural network, convolutional neural network).</li>
+<li>Define the number of layers and the type of each layer (e.g., fully connected, convolutional, dropout).</li>
+<li>Choose activation functions for each layer (e.g., ReLU, sigmoid).</li>
+</ul></li>
+<li><strong>Prepare the Data</strong>
+<ul>
+<li>Collect and preprocess the data (e.g., normalization, resizing, augmentation).</li>
+<li>Split the data into training, validation, and test sets.</li>
+</ul></li>
+<li><strong>Define the Loss Function and Optimizer</strong>
+<ul>
+<li>Choose a loss function appropriate for the task (e.g., cross-entropy for classification, mean squared error for regression).</li>
+<li>Select an optimization algorithm (e.g., SGD, Adam).</li>
+</ul></li>
+<li><strong>Implement the Training Loop</strong>
+<ul>
+<li>Initialize model parameters.</li>
+<li>For a specified number of epochs:
+<ul>
+<li><strong>Forward Pass</strong>: Pass the input data through the model to get the output.</li>
+<li><strong>Compute Loss</strong>: Calculate the loss using the model’s output and the actual target values.</li>
+<li><strong>Backward Pass</strong>: Compute gradients by backpropagation.</li>
+<li><strong>Update Parameters</strong>: Update the model’s parameters using the optimizer.</li>
+<li>Optionally, compute and log metrics on the validation set to monitor training progress.</li>
+</ul></li>
+</ul></li>
+<li><strong>Evaluate the Model</strong>
+<ul>
+<li>After training, evaluate the model on the test set to assess its performance.</li>
+</ul></li>
+<li><strong>Fine-tune and Deploy</strong>
+<ul>
+<li>Fine-tune the model by adjusting hyperparameters, adding regularization, or using more advanced architectures.</li>
+<li>Once satisfied with the performance, deploy the model for inference on new data.</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
